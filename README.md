@@ -96,7 +96,7 @@ Esto influye directamente en la aceleración, la estabilidad del sistema y la el
 La relación de inercia entre la carga reflejada y el motor es clave para el rendimiento:
 
 \[
-\$ Ri=frac{J_{carga\_reflejada}}{J_{motor}}$
+\$Ri=frac{J_{carga\_reflejada}}{J_{motor}}$
 \]
 
 - Una relación baja mejora la respuesta, pero puede requerir motores grandes.
