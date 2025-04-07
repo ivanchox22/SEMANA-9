@@ -65,7 +65,7 @@ Donde:
 El **torque reflejado** al eje del motor se obtiene transformando el torque necesario en la carga mediante la misma relación:
 
 \[
-T_r = \frac{T_L}{N}
+$T_r = \frac{T_L}{N}$
 \]
 
 Donde:
@@ -81,7 +81,7 @@ Donde:
 Los engranajes son mecanismos fundamentales para modificar velocidad y torque en sistemas mecánicos. La **relación de engranajes (N)** se define por el número de dientes o diámetros:
 
 \[
-N = \frac{Z_{conducido}}{Z_{conductor}} = \frac{D_{conducido}}{D_{conductor}}
+$N = \frac{Z_{conducido}}{Z_{conductor}} = \frac{D_{conducido}}{D_{conductor}}$
 \]
 
 Donde:
@@ -138,14 +138,14 @@ La **eficiencia en el control de movimiento** está relacionada con la capacidad
 La **inercia total** es la suma de todas las inercias reflejadas al eje del motor:
 
 \[
-J_{total} = J_{motor} + J_{transmision} + J_{carga\_reflejada}
+$J_{total} = J_{motor} + J_{transmision} + J_{carga\_reflejada}$
 \]
 
 Donde:
 
 - \( J_{motor} \): Inercia del rotor del motor.
 - \( J_{transmision} \): Inercia de engranajes, poleas, correas, etc.
-- \( J_{carga\_reflejada} = J_{carga} \cdot N^2 \)
+- \( $J_{carga\_reflejada} = J_{carga} \cdot N^2 \$)
 
 ### ⚙ Importancia:
 
@@ -160,7 +160,7 @@ Donde:
 Define el **equilibrio dinámico** entre la inercia del motor y la inercia reflejada de la carga:
 
 \[
-Relación\ de\ Inercia = \frac{J_{carga\_reflejada}}{J_{motor}}
+Relación\ de\ $Inercia = \frac{J_{carga\_reflejada}}{J_{motor}}$
 \]
 
 #### Casos prácticos:
@@ -200,13 +200,13 @@ El sistema de **polea y correa** es común en transmisiones mecánicas por su **
 Se calcula como:
 
 \[
-i = \frac{D_{conducida}}{D_{motriz}} = \frac{N_{motriz}}{N_{conducida}}
+$i = \frac{D_{conducida}}{D_{motriz}} = \frac{N_{motriz}}{N_{conducida}}$
 \]
 
 O también:
 
 \[
-i = \frac{Velocidad_{motriz}}{Velocidad_{conducida}}
+$i = \frac{Velocidad_{motriz}}{Velocidad_{conducida}}$
 \]
 
 ---
@@ -216,7 +216,7 @@ i = \frac{Velocidad_{motriz}}{Velocidad_{conducida}}
 En una transmisión por polea-correa, la **inercia reflejada al eje del motor** se calcula como:
 
 \[
-J_{ref} = J_{carga} \cdot i^2
+$J_{ref} = J_{carga} \cdot i^2$
 \]
 
 Donde:
@@ -231,7 +231,7 @@ Donde:
 El torque que debe entregar el motor se ve afectado por la relación de transmisión y la eficiencia del sistema:
 
 \[
-T_{motor} = \frac{T_{carga}}{i \cdot n}
+$T_{motor} = \frac{T_{carga}}{i \cdot n}$
 \]
 
 Donde:
