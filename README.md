@@ -56,7 +56,7 @@ Donde:
 
 - \( J_r \): Inercia reflejada al eje del motor.
 - \( J_L \): Inercia real de la carga.
-- \( N \): Relación de transmisión (generalmente definida como \( \frac{W_{motor}}{W_{carga}} \)).
+- \( N \): Relación de transmisión (generalmente definida como \( $N=\frac{W_{motor}}{W_{carga}}$ \)).
 
 ---
 
