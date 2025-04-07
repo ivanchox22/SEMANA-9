@@ -110,6 +110,11 @@ Se busca mantener esta relación dentro de un rango adecuado para lograr un equi
 
 Este sistema es común por su simplicidad y bajo costo. Es ideal para transmitir movimiento entre ejes alejados.
 
+![image](https://github.com/user-attachments/assets/da4a4a6d-ef63-4c43-9983-d250f38fd836)
+
+***FIG . Poleas y correas***
+
+
 ### Ventajas
 
 - Bajo nivel de ruido.
@@ -158,3 +163,70 @@ Gracias a la retroalimentación que ofrecen, se puede ajustar el comportamiento 
 
 ---
 
+---
+
+## Ejemplos
+
+### Ejemplo: Cálculo de inercia reflejada
+
+Una carga de **50 kg** debe ser posicionada usando un tornillo esferado de acero con:
+
+- **Densidad:** 0.14 kg/cm³  
+- **Diámetro:** 0.182 cm  
+- **Longitud:** 36 cm  
+- **Paso:** 0.75 cm/rev  
+- **Eficiencia:** 90%  
+- **Peso del carro:** 0.23 kg  
+
+Se desea calcular la **inercia reflejada** por la transmisión hacia el eje de entrada.
+
+#### Fórmula general de inercia reflejada:
+
+\[
+$J_{\text{trans ref}} = J_{\text{screw}} + \frac{1}{\eta N_s^2} \left( \frac{W_L + W_C}{g} \right)$
+\]
+
+Donde:
+
+- \( J_{\text{screw}} \): Inercia del tornillo  
+- \( \eta \): Eficiencia del tornillo  
+- \( N_s \): Relación de transmisión del tornillo  
+- \( W_L \): Peso de la carga  
+- \( W_C \): Peso del carro  
+- \( g \): Aceleración gravitacional  
+- \( J_{\text{load-in}} \) y \( J_{\text{carriage-in}} \): Se asumen despreciables
+
+#### Cálculo de la relación de transmisión:
+
+\[
+$N_s = \frac{2\pi}{P} = \frac{2\pi}{0.75} = 8.38$
+\]
+
+#### Cálculo de la inercia del tornillo (suponiendo cilindro alargado):
+
+\[
+$J_{\text{screw}} = \frac{\pi L \rho D^4}{32g}$
+\]
+
+Donde:
+
+- \( L = 0.36 \, \text{m} \)  
+- \( \rho = 140000 \, \text{kg/m}^3 \)  
+- \( D = 0.00182 \, \text{m} \)
+
+\[
+$J_{\text{screw}} = \frac{\pi \cdot 0.36 \cdot 140000 \cdot (0.00182)^4}{32} = 5.42 \times 10^{-8} \, \text{kg·m}^2$
+\]
+
+#### Sustituyendo todo en la fórmula principal:
+
+\[
+$J_{\text{trans ref}} = 5.42 \times 10^{-8} + \frac{1}{0.9 \cdot (8.38)^2} \left( \frac{50 + 0.23}{9.89} \right)$
+\]
+
+\[
+$J_{\text{trans ref}} \approx 8.1 \, \text{kg·m}^2$
+\]
+
+
+---
