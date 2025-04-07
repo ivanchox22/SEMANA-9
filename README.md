@@ -211,7 +211,7 @@ $J_{\text{screw}} = \frac{\pi L \rho D^4}{32g}$
 Donde:
 
 - \( L = 0.36 \, \text{m} \)  
-- \( \rho = 140000 \, \text{kg/m}^3 \)  
+- \( $\rho = 140000 \, \text{kg/m}^3$ \)  
 - \( D = 0.00182 \, \text{m} \)
 
 \[
