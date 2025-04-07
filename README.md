@@ -244,6 +244,58 @@ $J_{\text{trans ref}} \approx 8.1 \, \text{kg·m}^2$
 
 ---
 
+## Ejemplo - Cálculo de Relación de Inercia
+
+El sistema utiliza un engranaje con las siguientes características:
+
+- Relación de transmisión: \( $N_{GB}$ \)
+- Eficiencia del engranaje: \( \eta \)
+- Inercia de la carga: \( $J_{\text{load}}$ \)
+- Inercia del rotor del motor: \( J_m \)
+
+Se desea calcular la **relación de inercia \( J_R \)**, que relaciona la inercia total reflejada al motor con respecto a su propia inercia.
+
+### Datos del ejemplo
+
+- \( $N_{GB} = 5$ \)
+- \( \$eta = 0.97$ \)
+- \( $J_{\text{load}} = 10 \times 10^{-4} \, \text{kg·m}^2$ \)
+- \( $J_m = 1.5 \times 10^{-5} \, \text{kg·m}^2$ \)
+- \( $J_{\text{GB-M}} = 0.15 \times 10^{-4} \, \text{kg·m}^2$ \)
+
+---
+
+### Cálculos
+
+**1. Inercia reflejada de la carga al motor:**
+
+\[
+$J_{\text{load→M}} = \frac{J_{\text{load}}}{\eta \cdot N_{GB}^2}$
+$= \frac{10 \times 10^{-4}}{0.97 \cdot 5^2}$
+$= 4.124 \times 10^{-5} \, \text{kg·m}^2$
+\]
+
+**2. Relación de inercia total:**
+
+\[
+$J_R = \frac{J_m + J_{\text{load→M}} + J_{\text{GB-M}}}{J_m}$
+= \$frac{1.5 \times 10^{-5} + 4.124 \times 10^{-5} + 0.15 \times 10^{-4}}{1.5 \times 10^{-5}}$
+= 3.75
+\]
+
+---
+
+### Resultado
+
+La **relación de inercia total \( J_R \)** del sistema es:
+
+\[
+\$boxed{3.75}$
+\]
+
+Esto indica que la inercia total reflejada al eje del motor es 3.75 veces mayor que la inercia propia del rotor del motor.
+---
+
 ## Conclusiones
 
 - El cálculo de la **inercia reflejada** hacia el eje de entrada es fundamental para el dimensionamiento correcto del motor en sistemas de transmisión con tornillo esferado, permitiendo prever el comportamiento dinámico del sistema y garantizar un control preciso.
