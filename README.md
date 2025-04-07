@@ -290,7 +290,7 @@ $J_R = \frac{J_m + J_{\text{load→M}} + J_{\text{GB-M}}}{J_m}$
 La **relación de inercia total \( J_R \)** del sistema es:
 
 \[
-\$boxed{3.75}$
+\${3.75}$
 \]
 
 Esto indica que la inercia total reflejada al eje del motor es 3.75 veces mayor que la inercia propia del rotor del motor.
