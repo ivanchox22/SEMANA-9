@@ -1,254 +1,160 @@
 # SEMANA-9
 
-# Control de Movimiento (Diseño de Transmisión)
+# Control de Movimiento
 
-## Introducción al Diseño de Transmisión
+## Diseño de Transmisión
 
-El **diseño de transmisión** se encarga de transferir potencia y movimiento entre componentes mecánicos, utilizando distintos elementos como **engranajes, correas y cadenas**. Su propósito es asegurar una **transmisión eficiente, duradera y segura**, aplicable a sistemas como maquinaria industrial, robótica, vehículos y equipos automatizados.
+El diseño de transmisión tiene como objetivo transferir potencia y movimiento entre diferentes elementos mecánicos, utilizando sistemas como engranajes, correas y cadenas. Esta transferencia debe ser eficiente, precisa y segura, para asegurar el correcto funcionamiento de máquinas industriales, robots, vehículos y sistemas automatizados. Un diseño bien hecho optimiza el rendimiento energético, minimiza el desgaste, asegura precisión en el movimiento y se adapta a variaciones en la carga.
 
-Un diseño adecuado debe:
-
-- Optimizar el rendimiento energético.
-- Minimizar el desgaste mecánico.
-- Asegurar precisión en el control de movimiento.
-- Responder eficientemente ante cargas variables.
-
-Este diseño combina principios de **cinemática, dinámica** y **resistencia de materiales** para lograr un sistema robusto y confiable.
+Para lograrlo, se aplican principios de la cinemática, dinámica y resistencia de materiales, con el fin de construir un sistema robusto, confiable y de larga duración.
 
 ---
 
-## 1. Requerimientos de Diseño
+## Requisitos de Diseño
 
-Para asegurar que el diseño en **control de movimiento** funcione correctamente, se deben tener en cuenta varios aspectos:
+Antes de diseñar un sistema de control de movimiento, es necesario definir claramente sus requerimientos. Esto incluye la correcta selección del motor y del mecanismo de transmisión, así como una evaluación del comportamiento del sistema ante distintas cargas y condiciones de trabajo.
 
-- ✅ Selección adecuada del **motor** y del **mecanismo de transmisión**.
-- ✅ Evaluar el comportamiento del sistema ante distintos escenarios de carga.
-- ✅ Cumplir con requerimientos específicos como **costo, precisión, eficiencia energética** y **tiempo de respuesta**.
+Es importante tener en cuenta factores como el costo, la precisión, el consumo de energía, el tiempo de respuesta y el espacio físico disponible. Además, el torque del motor debe estar sobredimensionado con un margen de seguridad para cubrir situaciones extremas. También se debe cuidar que la relación de inercia entre la carga y el motor no afecte la respuesta dinámica del sistema.
 
-### Indicadores Clave:
+A continuación, se presentan diferentes situaciones que pueden surgir en el diseño:
 
-- **Torque del motor:** debe ser suficiente para mover la carga, incluso en condiciones extremas. Se recomienda incluir un **margen de seguridad**.
-- **Relación de inercia adecuada:** entre motor y carga para lograr una respuesta dinámica eficiente.
-- **Criterios adicionales:** según las necesidades específicas del sistema (precisión, costos, tiempos de ciclo, espacio físico, etc).
-
-### Tipos de problemas en diseño:
-
-| Escenario | Objetivo del Diseño |
-|----------|---------------------|
-| **Movimiento de carga deseado** | ➜ Dimensionar la transmisión y motor. |
-| **Motor y transmisión existentes** | ➜ Determinar el movimiento de carga resultante. |
-| **Motor existente + movimiento deseado** | ➜ Dimensionar la transmisión. |
-| **Movimiento deseado + transmisión existente** | ➜ Seleccionar el motor adecuado. |
+| Situación | Enfoque |
+|----------|---------|
+| Se conoce el movimiento deseado | Dimensionar motor y transmisión |
+| Ya existe motor y transmisión | Calcular movimiento que se obtiene |
+| Motor existente y se busca un movimiento | Calcular la transmisión requerida |
+| Transmisión existente y se busca un movimiento | Seleccionar motor adecuado |
 
 ---
 
-## 2. Inercia y Torque Reflejado
+## Inercia y Torque
 
-### 🔁 Inercia Reflejada
+### Inercia Reflejada
 
-La **inercia reflejada** es la cantidad de inercia que el motor "siente" debido a los componentes conectados a través del sistema de transmisión. Se ajusta utilizando la **relación de transmisión (N)**:
+Cuando se conecta una carga a través de un sistema de transmisión, el motor no "siente" la inercia real de la carga, sino una versión ajustada por la relación de transmisión. Esta se conoce como inercia reflejada:
 
 \[
-J_r = J_L \cdot N^2
+$J_r = J_L \cdot N^2$
 \]
 
-Donde:
+Donde \( J_r \) es la inercia reflejada, \( J_L \) es la inercia de la carga, y \( N \) es la relación de transmisión.
 
-- \( J_r \): Inercia reflejada al eje del motor.
-- \( J_L \): Inercia real de la carga.
-- \( N \): Relación de transmisión (generalmente definida como \( $N=\frac{W_{motor}}{W_{carga}}$ \)).
+### Torque Reflejado
 
----
-
-### 🔁 Torque Reflejado
-
-El **torque reflejado** al eje del motor se obtiene transformando el torque necesario en la carga mediante la misma relación:
+De manera similar, el torque que el motor necesita entregar también cambia debido a la transmisión. Se calcula así:
 
 \[
 $T_r = \frac{T_L}{N}$
 \]
 
-Donde:
-
-- \( T_r \): Torque reflejado al motor.
-- \( T_L \): Torque de la carga.
-- \( N \): Relación de transmisión.
+Esto permite adaptar el sistema para reducir el esfuerzo del motor o ajustar el comportamiento dinámico.
 
 ---
 
-## 3. Conceptos de Transmisión: Engranajes
+## Engranajes
 
-Los engranajes son mecanismos fundamentales para modificar velocidad y torque en sistemas mecánicos. La **relación de engranajes (N)** se define por el número de dientes o diámetros:
+Los engranajes son esenciales para modificar el torque y la velocidad en los sistemas mecánicos. La relación de transmisión depende del número de dientes o del diámetro de los engranajes:
 
 \[
 $N = \frac{Z_{conducido}}{Z_{conductor}} = \frac{D_{conducido}}{D_{conductor}}$
 \]
 
-Donde:
+Donde \( Z \) representa el número de dientes y \( D \) el diámetro de cada engranaje.
 
-- \( Z \): Número de dientes.
-- \( D \): Diámetro del engranaje.
-
-### 📉 Efectos de la relación de engranajes:
-
-- **Reducción de velocidad (N > 1):**
-  - El engranaje conducido es mayor.
-  - Aumenta el torque, disminuye la velocidad.
-
-- **Aumento de velocidad (N < 1):**
-  - El engranaje conducido es más pequeño.
-  - Disminuye el torque, aumenta la velocidad.
-
-- **Relación 1:1 (N = 1):**
-  - Ambos engranajes tienen el mismo tamaño.
-  - No hay cambio en velocidad ni en torque.
+- Si \( N > 1 \), se reduce la velocidad y aumenta el torque.
+- Si \( N < 1 \), se incrementa la velocidad y se reduce el torque.
+- Si \( N = 1 \), no hay cambios en torque ni velocidad.
 
 ---
 
-### 3.1. Eficiencia
+## Eficiencia
 
-La **eficiencia en el control de movimiento** está relacionada con la capacidad del sistema de realizar movimientos precisos con el menor consumo energético posible.
+Un sistema eficiente es aquel que logra el movimiento deseado con el menor consumo posible de energía. Esto depende de varios factores:
 
-#### Factores que afectan la eficiencia:
-
-- **Transmisión de Energía:**
-  - Utilizar mecanismos de baja fricción.
-  - Diseños con juegos y holguras mínimas.
-
-- **Control de Torque y Velocidad:**
-  - Implementar algoritmos PID o controladores avanzados.
-  - Relación de inercia óptima.
-
-- **Reducción de pérdidas:**
-  - Selección de motores eficientes.
-  - Evitar sobrecargas y funcionamiento fuera del rango nominal.
-
-- **Perfil de Movimiento:**
-  - Aceleraciones suaves.
-  - Control de trayectoria e interpolación.
-
-- **Sensores y Realimentación:**
-  - Uso de sensores de alta resolución.
-  - Retroalimentación en tiempo real para corrección dinámica.
+- Usar mecanismos con baja fricción y mínimas holguras.
+- Implementar controladores adecuados como PID.
+- Seleccionar motores eficientes y evitar sobrecargas.
+- Diseñar trayectorias suaves con perfiles de aceleración adecuados.
+- Incluir sensores de alta resolución para retroalimentación precisa.
 
 ---
 
-### 3.2. Inercia Total
+## Inercia Total
 
-La **inercia total** es la suma de todas las inercias reflejadas al eje del motor:
+La inercia total que enfrenta el motor es la suma de varias componentes:
 
 \[
 $J_{total} = J_{motor} + J_{transmision} + J_{carga\_reflejada}$
 \]
 
-Donde:
-
-- \( J_{motor} \): Inercia del rotor del motor.
-- \( J_{transmision} \): Inercia de engranajes, poleas, correas, etc.
-- \( $J_{carga\_reflejada} = J_{carga} \cdot N^2 \$)
-
-### ⚙ Importancia:
-
-- Afecta la aceleración del sistema.
-- Influye en la selección del motor.
-- Mejora la estabilidad y respuesta dinámica.
+Esto influye directamente en la aceleración, la estabilidad del sistema y la elección del motor.
 
 ---
 
-### 3.3. Relación de Inercia
+## Relación de Inercia
 
-Define el **equilibrio dinámico** entre la inercia del motor y la inercia reflejada de la carga:
+La relación de inercia entre la carga reflejada y el motor es clave para el rendimiento:
 
 \[
-Relación\ de\ $Inercia = \frac{J_{carga\_reflejada}}{J_{motor}}$
+\$ Ri=frac{J_{carga\_reflejada}}{J_{motor}}$
 \]
 
-#### Casos prácticos:
+- Una relación baja mejora la respuesta, pero puede requerir motores grandes.
+- Una relación alta puede ser útil para movimientos lentos, aunque reduce eficiencia.
 
-- **Relación baja (1-2):**
-  - Alta respuesta dinámica.
-  - Puede requerir un motor grande (mayor costo).
-
-- **Relación alta (>10):**
-  - Útil en movimientos lentos o estables.
-  - Menor eficiencia y riesgo de bajo torque.
-
-Un diseño eficiente requiere mantener esta relación dentro de un rango adecuado para la aplicación.
+Se busca mantener esta relación dentro de un rango adecuado para lograr un equilibrio entre respuesta y consumo.
 
 ---
 
-## 4. Sistema de Transmisión Polea-Correa
+## Poleas y Correas
 
-El sistema de **polea y correa** es común en transmisiones mecánicas por su **simplicidad, bajo costo** y capacidad para conectar ejes distantes.
+Este sistema es común por su simplicidad y bajo costo. Es ideal para transmitir movimiento entre ejes alejados.
 
-### ✅ Ventajas:
+### Ventajas
 
 - Bajo nivel de ruido.
-- Alineación flexible.
-- Absorción de vibraciones.
+- Tolerancia a desalineaciones.
+- Amortiguación de vibraciones.
 
-### ❌ Desventajas:
+### Desventajas
 
 - Pérdidas por deslizamiento.
-- Requiere mantenimiento (tensión, cambio de correa).
-- Menor eficiencia comparado con engranajes.
+- Requiere mantenimiento regular.
+- Menor eficiencia que los engranajes.
 
----
+### Relación de Transmisión
 
-### 4.1. Relación de Transmisión
-
-Se calcula como:
+Se puede calcular mediante:
 
 \[
-$i = \frac{D_{conducida}}{D_{motriz}} = \frac{N_{motriz}}{N_{conducida}}$
+$i = \frac{D_{conducida}}{D_{motriz}} = \frac{N_{motriz}}{N_{conducida}} = \frac{Vel_{motriz}}{Vel_{conducida}}$
 \]
 
-O también:
+### Inercia Reflejada
 
-\[
-$i = \frac{Velocidad_{motriz}}{Velocidad_{conducida}}$
-\]
-
----
-
-### 4.2. Inercia Reflejada
-
-En una transmisión por polea-correa, la **inercia reflejada al eje del motor** se calcula como:
+La carga reflejada al motor se calcula con:
 
 \[
 $J_{ref} = J_{carga} \cdot i^2$
 \]
 
-Donde:
+### Torque
 
-- \( J_{carga} \): Inercia real de la carga.
-- \( i \): Relación de transmisión.
-
----
-
-### 4.3. Torque de Carga
-
-El torque que debe entregar el motor se ve afectado por la relación de transmisión y la eficiencia del sistema:
+El torque requerido en el motor depende de la transmisión y la eficiencia:
 
 \[
 $T_{motor} = \frac{T_{carga}}{i \cdot n}$
 \]
 
-Donde:
-
-- \( T_{motor} \): Torque requerido por el motor.
-- \( T_{carga} \): Torque de la carga.
-- \( i \): Relación de transmisión.
-- \( n \): Eficiencia del sistema.
+Donde \( n \) es la eficiencia del sistema.
 
 ---
 
-## 🧠 Nota Final sobre Sensores
+## Sensores
 
-Un **sensor** es un dispositivo que detecta variaciones en una magnitud física (temperatura, presión, luz, etc.) y las convierte en señales eléctricas. Son fundamentales en sistemas de control de movimiento porque:
+Los sensores son elementos fundamentales en cualquier sistema de control de movimiento. Permiten medir variables como posición, velocidad o aceleración, y enviar esta información a un controlador.
 
-- Permiten **realimentación precisa**.
-- Mejoran la eficiencia y exactitud.
-- Aumentan la seguridad del sistema.
+Gracias a la retroalimentación que ofrecen, se puede ajustar el comportamiento del sistema en tiempo real, mejorando la precisión, eficiencia y seguridad.
 
 ---
+
