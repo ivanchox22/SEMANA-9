@@ -188,13 +188,13 @@ $J_{\text{trans ref}} = J_{\text{screw}} + \frac{1}{\eta N_s^2} \left( \frac{W_L
 
 Donde:
 
-- \( J_{\text{screw}} \): Inercia del tornillo  
+- \( $J_{\text{screw}}$ \): Inercia del tornillo  
 - \( \eta \): Eficiencia del tornillo  
 - \( N_s \): Relación de transmisión del tornillo  
 - \( W_L \): Peso de la carga  
 - \( W_C \): Peso del carro  
 - \( g \): Aceleración gravitacional  
-- \( J_{\text{load-in}} \) y \( J_{\text{carriage-in}} \): Se asumen despreciables
+- \( $J_{\text{load-in}} \)$ y \( $J_{\text{carriage-in}}$ \): Se asumen despreciables
 
 #### Cálculo de la relación de transmisión:
 
@@ -210,9 +210,9 @@ $J_{\text{screw}} = \frac{\pi L \rho D^4}{32g}$
 
 Donde:
 
-- \( L = 0.36 \, \text{m} \)  
+- \( $L = 0.36 \, \text{m}$\)  
 - \( $\rho = 140000 \, \text{kg/m}^3$ \)  
-- \( D = 0.00182 \, \text{m} \)
+- \( $D = 0.00182 \, \text{m} \$)
 
 \[
 $J_{\text{screw}} = \frac{\pi \cdot 0.36 \cdot 140000 \cdot (0.00182)^4}{32} = 5.42 \times 10^{-8} \, \text{kg·m}^2$
