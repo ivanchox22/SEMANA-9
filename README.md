@@ -112,7 +112,7 @@ Este sistema es común por su simplicidad y bajo costo. Es ideal para transmitir
 
 ![image](https://github.com/user-attachments/assets/da4a4a6d-ef63-4c43-9983-d250f38fd836)
 
-***FIG . Poleas y correas***
+***FIG 1. Poleas y correas***
 
 
 ### Ventajas
@@ -135,6 +135,10 @@ Se puede calcular mediante:
 $i = \frac{D_{conducida}}{D_{motriz}} = \frac{N_{motriz}}{N_{conducida}} = \frac{Vel_{motriz}}{Vel_{conducida}}$
 \]
 
+![image](https://github.com/user-attachments/assets/096d988f-9b4b-4dd0-a189-e23603b14ed6)
+
+***FIG 2. Relacion de trasmision***
+
 ### Inercia Reflejada
 
 La carga reflejada al motor se calcula con:
@@ -143,6 +147,11 @@ La carga reflejada al motor se calcula con:
 $J_{ref} = J_{carga} \cdot i^2$
 \]
 
+
+![image](https://github.com/user-attachments/assets/a2bc9217-411f-4ba9-83ff-43fdadfb3793)
+
+***FIG 3. Inercia refejada***
+
 ### Torque
 
 El torque requerido en el motor depende de la transmisión y la eficiencia:
@@ -150,6 +159,10 @@ El torque requerido en el motor depende de la transmisión y la eficiencia:
 \[
 $T_{motor} = \frac{T_{carga}}{i \cdot n}$
 \]
+
+![image](https://github.com/user-attachments/assets/0ec7c7d9-4f22-449e-9c6e-876145e17ac6)
+
+***FIG 4. Torque***
 
 Donde \( n \) es la eficiencia del sistema.
 
