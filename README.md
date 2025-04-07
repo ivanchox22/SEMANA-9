@@ -230,3 +230,17 @@ $J_{\text{trans ref}} \approx 8.1 \, \text{kg·m}^2$
 
 
 ---
+
+## Conclusiones
+
+- El cálculo de la **inercia reflejada** hacia el eje de entrada es fundamental para el dimensionamiento correcto del motor en sistemas de transmisión con tornillo esferado, permitiendo prever el comportamiento dinámico del sistema y garantizar un control preciso.
+
+- La **mayor contribución a la inercia reflejada** proviene de la carga útil y el carro, más que del tornillo en sí, lo cual subraya la importancia de considerar el peso total desplazado en el análisis.
+
+- La **relación de transmisión \(N_s\)** tiene un efecto cuadrático inverso sobre la inercia reflejada, lo que significa que un diseño con una relación adecuada puede reducir significativamente el esfuerzo requerido por el motor.
+
+- La **eficiencia mecánica \(\eta\)** de la transmisión también afecta directamente la inercia reflejada: una eficiencia baja incrementa la inercia equivalente, por lo que es esencial emplear componentes de alta calidad y bajo coeficiente de fricción.
+
+- El uso correcto de **modelos geométricos** (como suponer el tornillo como cilindro alargado) y fórmulas específicas (como \( J_{\text{screw}} = \frac{\pi L \rho D^4}{32} \)) permite estimar con mayor precisión la inercia del sistema, siempre que se utilicen unidades consistentes y adecuadas (SI o sistema inglés).
+
+- Finalmente, este tipo de análisis no solo optimiza la selección del motor, sino que también mejora la vida útil del sistema, reduce el consumo energético y mejora la seguridad operativa del conjunto.
